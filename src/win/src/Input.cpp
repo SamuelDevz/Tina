@@ -4,14 +4,14 @@
 
 namespace Luna
 {
-    bool Input::keys[256] = {};
-    bool Input::ctrl[256] = {};
+    bool Input::keys[MAX_KEYS] = {};
+    bool Input::ctrl[MAX_KEYS] = {};
     string Input::text;
 
     int32 Input::mouseX = 0;
     int32 Input::mouseY = 0;
     int16 Input::mouseWheel = 0;
-									
+
     Input::Input() noexcept
     {
         SetWindowLongPtr(GetActiveWindow(), GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(&Input::InputProc));

@@ -6,11 +6,13 @@
 
 namespace Luna
 {
+    enum { MAX_KEYS = 256 };
+
     class DLL Input
     {
     private:
-        static bool	keys[256];
-        static bool ctrl[256];
+        static bool	keys[MAX_KEYS];
+        static bool ctrl[MAX_KEYS];
         static string text;
 
         static int32 mouseX;
